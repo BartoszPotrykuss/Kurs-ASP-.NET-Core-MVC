@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Test_web_app.Models.Product>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<ul>
+@foreach (var product in Model)
+{
+    <li>@product.Category - @product.Name - @product.Id</li>
+}
+</ul>
+
+
+<h2>Warunek - tylko samochody</h2>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        if (product.Category == "samochod")
+        {
+            <li>@product.Category - @product.Name - @product.Id</li>
+        }
+    }
+</ul>

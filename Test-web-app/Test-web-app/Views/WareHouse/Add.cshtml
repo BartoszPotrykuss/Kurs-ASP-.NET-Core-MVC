@@ -1,0 +1,12 @@
+﻿@model Test_web_app.Models.Product
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Dodawanie produktu</h1>
+
+@Html.Partial("_AddProductForm", Model)
+
+<p>ID PO ZAPISIE (ViewData) <strong>@ViewData["ProductId"]</strong>     Utracenie wartości bo viewData i viewBag jest tylko w obrębie jednego zapytania</p>
+<p>ID PO ZAPISIE (TempData) <strong>@TempData["ProductId"]</strong> </p>

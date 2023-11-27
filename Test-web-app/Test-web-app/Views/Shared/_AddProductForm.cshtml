@@ -1,0 +1,12 @@
+﻿@model Test_web_app.Models.Product
+
+@using (Html.BeginForm("Add", "Warehouse", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    <span>Nazwa produktu: </span> @Html.TextBoxFor(x => x.Name)
+    <span>Opis produktu: </span> @Html.TextBoxFor(x => x.Description)
+    <span>Kategoria produktu: </span> @Html.TextBoxFor(x => x.Category)
+
+    <button type="submit">Dodaj produkt</button>
+}
+

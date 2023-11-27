@@ -1,0 +1,10 @@
+﻿@model Test_web_app.Models.WeatherResponse
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Wartość z api pogowego: </h1>
+<p>Temperatura max: @Model.main.temp_max</p>
+<p>Temperatura min: @Model.main.temp_min</p>
+
